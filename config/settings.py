@@ -23,7 +23,8 @@ class Config:
     CHANNEL_USERNAME = os.getenv('CHANNEL_USERNAME')
 
     # Selenium settings
-    CHROMEDRIVER_PATH = os.path.join(os.path.dirname(__file__), "..", "chromedriver-mac-x64", "chromedriver")
+    #CHROMEDRIVER_PATH = os.path.join(os.path.dirname(__file__), "..", "chromedriver-mac-x64", "chromedriver")
+    CHROMEDRIVER_PATH = os.getenv('CHROMEDRIVER_PATH', '/usr/bin/chromedriver')
 
     @classmethod
     def validate_env_variables(cls):
