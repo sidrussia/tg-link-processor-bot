@@ -42,7 +42,11 @@ def main():
 
     # Start the bot
     logger.info("Bot started...")
-    application.run_polling(drop_pending_updates=True)
+    application.run_polling(
+        timeout=20,
+        read_timeout=25,
+        drop_pending_updates=True
+    )
 
 
 if __name__ == "__main__":
